@@ -1,1 +1,18 @@
-|group_sum == |sort|uniq -c|sort -nr
+use for top N
+  |group_sum == |sort|uniq -c|sort -nr
+
+performance
+
+  sample data is 1583232 rows with 621 unique value (20x faster)
+
+  time ./bin/group_sum < sample.log > /dev/null
+
+real    0m0.766s
+user    0m0.758s
+sys     0m0.008s
+
+  time cat sample.log|sort|uniq -c|sort -nr > /dev/null
+
+real    0m15.865s
+user    0m16.714s
+sys     0m0.120s

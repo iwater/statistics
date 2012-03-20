@@ -16,3 +16,9 @@ sys     0m0.008s
 real    0m15.865s
 user    0m16.714s
 sys     0m0.120s
+
+use for merge two files with same key as 1st column
+  cat one.log|fill_pipe -f two.log
+
+use for unique
+  |uniq

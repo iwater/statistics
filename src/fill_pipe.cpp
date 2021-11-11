@@ -126,7 +126,7 @@ template <unsigned NHASH = 29989,    unsigned MULT = 31,
 
 bool less_second(const pair<string,int> & m1, const pair<string,int> & m2) { return m1.second > m2.second; }
 
-void split(const char * buf,char * key, char * value){
+void split(char * buf,char * key, char * value){
 	memset( key, '\0', 4096 );
 	memset( value, '\0', 4096 );
 	char * pch=strchr(buf,'	');
